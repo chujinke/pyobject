@@ -1,18 +1,18 @@
 ﻿# Nginx
 
-##Nginx简介
+## Nginx简介
 - Nginx 是俄罗斯人编写的十分轻量级的 HTTP 服务器
 - Nginx 以事件驱动的方式编写，所以有非常好的性能，同时也是一个非常高效的反向代理、负载平衡。
 - 拥有匹敌 Lighttpd 的性能，同时还没有 Lighttpd 的内存泄漏问题，而且 Lighttpd 的 mod_proxy 也有一些问题并且很久没有更新。
 
-##Nginx特点
+## Nginx特点
 - 处理静态文件，索引文件以及自动索引；打开文件描述符缓冲．
 - 无缓存的反向代理加速，简单的负载均衡和容错．
 - FastCGI，简单的负载均衡和容错．
 - 模块化的结构。包括 gzipping, byte ranges, chunked responses,以及 SSI-filter 等 filter。如果由 FastCGI 或其它代理服务器处理单页中存在的多个 SSI，则这项处理可以并行运行，而不需要相互等待。
 - 支持 SSL 和 TLSSNI．
 
-##Nginx较Apache
+## Nginx较Apache
 - 轻量级，同样起web 服务，比apache 占用更少的内存及资源 
 - Nginx 静态处理性能比 Apache 高 
 - 抗并发，nginx 处理请求是异步非阻塞的，而apache 则是阻塞型的，在高并发下nginx 能保持低资源低消耗高性能 
@@ -20,7 +20,7 @@
 - 社区活跃，各种高性能模块出品迅速
 - 适合静态和反向。 
 
-##Nginx架构
+## Nginx架构
 1. 概要
     - Nginx 在启动后，在 unix 系统中会以 daemon 的方式在后台运行，后台进程包含一个 master 进程和多个 worker 进程。
     - master 进程主要用来管理 worker 进程，包含：接收来自外界的信号，向各 worker 进程发送信号，监控 worker 进程的运行状态，当 worker 进程退出后(异常情况下)，会自动重新启动新的 worker 进程。
